@@ -2,9 +2,6 @@ const btnLoadImages = document.querySelector(".main__btn-load-images");
 const btnCleanImages = document.querySelector(".main__btn-clean-images");
 const imagesContainer = document.querySelector(".main__images-container");
 
-btnLoadImages.addEventListener("click", getImages);
-btnCleanImages.addEventListener("click", cleanImages);
-
 async function getImages() {
     const loader = document.querySelector(".main__loader");
     loader.style.display = "block";
@@ -37,3 +34,6 @@ function displayImages(images) {
 function cleanImages() {
     imagesContainer.innerHTML = "";
 };
+
+btnLoadImages.addEventListener("click", getImages);
+btnCleanImages.addEventListener("click", cleanImages);
